@@ -1,0 +1,34 @@
+.list-container{
+    max-width: 100%;
+    border: 2px solid black;
+    min-height: 10vh;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 4px rgba(255, 179, 0, 0.598);
+}
+
+input{
+    text-align: center;
+}
+
+table{
+    width: 99%;
+}
+
+.add-day{
+    max-width: 70px;
+    
+}
+
+th{
+    input{
+        width: 100%;
+        height: 50px;
+    }
+}
+
+td{
+    min-height: 30px;
+    min-width: 30px;
+    text-align: center;
+}
