@@ -1,5 +1,6 @@
 import AddWork from "../components/AddWork";
 import InfoWorkers from "../components/InfoWorkers";
+import ResetAll from "../components/ResetAll";
 import { WorksList } from "../components/WorksList";
 
 export const HomePage = () => {
@@ -8,6 +9,7 @@ export const HomePage = () => {
       <WorksList />
       <AddWork />
       <InfoWorkers />
+      <ResetAll />
     </>
   );
 };

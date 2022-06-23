@@ -13,10 +13,10 @@ function WorksRow({ work, updateDays, stopUpdate }) {
       if ((day > 0 && workDay >= 0) || workDay === "-") {
         dispatch(updateDay({ id: work.id, day, work: workDay }));
         stopUpdate();
-        setDay("");
+        setDay(+day + 1);
         setWorkDay("");
-      }else{
-        stopUpdate()
+      } else {
+        stopUpdate();
       }
     }
   }, [updateDays]);

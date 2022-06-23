@@ -24,41 +24,41 @@ const worksSlice = createSlice({
     deleteWork: (state, { payload }) => {
       state.works = state.works.filter(work => work.id !== payload.id);
     },
-    updateWorkName: (state, {payload}) => {
-  
-      state.works = state.works.map((worker) => {
-        if(worker.id === payload.id){
+    updateWorkName: (state, { payload }) => {
+      state.works = state.works.map(worker => {
+        if (worker.id === payload.id) {
           return {
-            ...worker, name: payload.name
-          }
-        }else{
-          return worker
+            ...worker,
+            name: payload.name,
+          };
+        } else {
+          return worker;
         }
-      })
+      });
     },
-    updateWorkMoney: (state, {payload}) => {
-  
-      state.works = state.works.map((worker) => {
-        if(worker.id === payload.id){
+    updateWorkMoney: (state, { payload }) => {
+      state.works = state.works.map(worker => {
+        if (worker.id === payload.id) {
           return {
-            ...worker, money: payload.money
-          }
-        }else{
-          return worker
+            ...worker,
+            money: payload.money,
+          };
+        } else {
+          return worker;
         }
-      })
+      });
     },
-    updateWorkPerecent: (state, {payload}) => {
-  
-      state.works = state.works.map((worker) => {
-        if(worker.id === payload.id){
+    updateWorkPerecent: (state, { payload }) => {
+      state.works = state.works.map(worker => {
+        if (worker.id === payload.id) {
           return {
-            ...worker, perecent: payload.perecent
-          }
-        }else{
-          return worker
+            ...worker,
+            perecent: payload.perecent,
+          };
+        } else {
+          return worker;
         }
-      })
+      });
     },
     updateDay: (state, { payload }) => {
       state.works = state.works.map(worker => {
@@ -73,10 +73,21 @@ const worksSlice = createSlice({
           return worker;
         }
       });
-    }
+    },
+    resetAll: state => {
+      state.works = [];
+    },
   },
 });
 
-export const { addWork, deleteWork, updateDay, updateWorkName, updateWorkMoney, updateWorkPerecent } = worksSlice.actions;
+export const {
+  addWork,
+  deleteWork,
+  updateDay,
+  updateWorkName,
+  updateWorkMoney,
+  updateWorkPerecent,
+  resetAll
+} = worksSlice.actions;
 
 export default worksSlice.reducer;
